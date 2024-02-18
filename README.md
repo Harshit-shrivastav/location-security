@@ -43,10 +43,13 @@ Change Loader Style
 
 Edit the CSS in <style> tag
 <br>
+
+## 📄 License
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
+
 ## 🙌 Credits
 - IP Address API: [ipify](https://www.ipify.org/)
 - Location API: [ipapi](https://ipapi.co/)
 
 Made with ❤️ by [Harshit Shrivastav](https://github.com/Harshit-shrivastav)
 
-## LICENSE
