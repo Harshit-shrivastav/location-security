@@ -17,11 +17,9 @@ A fancy loading page that displays content only to visitors from selected region
 
 ## 🗺 Allowed Regions  
 
-The regions are hardcoded in the JS:
-
-
+- The regions are hardcoded in the JS:<br>
 ```['delhi', 'haryana', 'uttar pradesh']```<br>
-Add, remove or modify as you wish.
+- Add, remove or modify as you wish.
 
 <br>
 
@@ -36,12 +34,12 @@ Visitors from allowed regions will see content after smooth loading animation.
 Others will be redirected to Google.
 <br>
 ## 🛠️ Customization
-Change Regions
+- Change Regions
 
-Update regions array in JS file
-Change Loader Style
+- Update regions array in JS file
+- Change Loader Style
 
-Edit the CSS in <style> tag
+- Edit the CSS in <style> tag
 <br>
 
 ## 📄 License
