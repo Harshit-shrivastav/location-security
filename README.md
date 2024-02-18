@@ -20,11 +20,11 @@ A fancy loading page that displays content only to visitors from selected region
 The regions are hardcoded in the JS:
 
 
-```['delhi', 'haryana', 'uttar pradesh']```
+```['delhi', 'haryana', 'uttar pradesh']```<br>
 Add, remove or modify as you wish.
 
 <br>
-👨‍💻 Usage
+👨‍💻 Usage<br>
 Step 1: Add code in the desired page.
 
 Step 2: Open the page!
