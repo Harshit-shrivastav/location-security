@@ -24,7 +24,10 @@ The regions are hardcoded in the JS:
 Add, remove or modify as you wish.
 
 <br>
-👨‍💻 Usage<br>
+
+## 🧑‍💼 Usage
+
+
 Step 1: Add code in the desired page.
 
 Step 2: Open the page!
@@ -32,7 +35,7 @@ Step 2: Open the page!
 Visitors from allowed regions will see content after smooth loading animation.
 Others will be redirected to Google.
 <br>
-🛠️ Customization
+## 🛠️ Customization
 Change Regions
 
 Update regions array in JS file
@@ -40,6 +43,10 @@ Change Loader Style
 
 Edit the CSS in <style> tag
 <br>
-🙌 Credits
-IP Geolocation APIs for location data
-Loading animation created with CSS
+## 🙌 Credits
+- IP Address API: [ipify](https://www.ipify.org/)
+- Location API: [ipapi](https://ipapi.co/)
+
+Made with ❤️ by [Harshit Shrivastav](https://github.com/Harshit-shrivastav)
+
+## LICENSE
