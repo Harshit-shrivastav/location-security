@@ -1,0 +1,200 @@
+<!-- Please give me credits while using this code in your website -->
+<!-- Made by https://harshitshrivastav.me -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Page</title>
+<style>
+  /* Loader styles */
+  .loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    z-index: 9999;
+    display: none;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Content styles */
+  .content {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="loader"></div>
+
+<div class="content">
+  <!-- Your website contents here -->
+  <h1>Welcome to the Website</h1>
+  <p>This is the content of the website.</p>
+</div>
+
+<script>
+  // Loader display
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'block';
+
+  // Fetch IP address function
+  async function fetchIPAddress() {
+    try {
+      const response = await fetch('https://api.ipify.org?format=json');
+      const data = await response.json();
+      return data.ip;
+    } catch (error) {
+      console.error('Error fetching IP address:', error);
+      return null;
+    }
+  }
+
+  // Check location function
+  async function checkLocation() {
+    const ipAddress = await fetchIPAddress();
+    if (!ipAddress) {
+      // Handle error case
+      console.error('IP address not found.');
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://ipapi.co/${ipAddress}/json/`);
+      const data = await response.json();
+      const { city, region } = data;
+
+      // Check if city or region contains the specified keywords
+      const keywords = ['delhi', 'haryana', 'Uttar Pradesh'];
+      const found = keywords.some(keyword => city.toLowerCase().includes(keyword.toLowerCase()) || region.toLowerCase().includes(keyword.toLowerCase()));
+
+      if (found) {
+        // Hide loader and show content
+        loader.style.display = 'none';
+        document.querySelector('.content').style.display = 'block';
+      } else {
+        // Redirect user to Google.com
+        window.location.href = 'https://www.google.com';
+      }
+    } catch (error) {
+      console.error('Error checking location:', error);
+    }
+  }
+
+  // Check location when the page is loaded
+  window.onload = checkLocation;
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Page</title>
+<style>
+  /* Loader styles */
+  .loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    z-index: 9999;
+    display: none;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Content styles */
+  .content {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="loader"></div>
+
+<div class="content">
+  <!-- Your website contents here -->
+  <h1>Welcome to the Website</h1>
+  <p>This is the content of the website.</p>
+</div>
+
+<script>
+  // Loader display
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'block';
+
+  // Fetch IP address function
+  async function fetchIPAddress() {
+    try {
+      const response = await fetch('https://api.ipify.org?format=json');
+      const data = await response.json();
+      return data.ip;
+    } catch (error) {
+      console.error('Error fetching IP address:', error);
+      return null;
+    }
+  }
+
+  // Check location function
+  async function checkLocation() {
+    const ipAddress = await fetchIPAddress();
+    if (!ipAddress) {
+      // Handle error case
+      console.error('IP address not found.');
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://ipapi.co/${ipAddress}/json/`);
+      const data = await response.json();
+      const { city, region } = data;
+
+      // Check if city or region contains the specified keywords
+      const keywords = ['delhi', 'haryana', 'Uttar Pradesh'];
+      const found = keywords.some(keyword => city.toLowerCase().includes(keyword.toLowerCase()) || region.toLowerCase().includes(keyword.toLowerCase()));
+
+      if (found) {
+        // Hide loader and show content
+        loader.style.display = 'none';
+        document.querySelector('.content').style.display = 'block';
+      } else {
+        // Redirect user to Google.com
+        window.location.href = 'https://www.google.com';
+      }
+    } catch (error) {
+      console.error('Error checking location:', error);
+    }
+  }
+
+  // Check location when the page is loaded
+  window.onload = checkLocation;
+</script>
+
+</body>
+</html>
