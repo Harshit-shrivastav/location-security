@@ -19,9 +19,9 @@ A fancy loading page that displays content only to visitors from selected region
 
 The regions are hardcoded in the JS:
 
-```js
-['delhi', 'haryana', 'uttar pradesh']
-Add, remove or modify as you wish.```
+
+```['delhi', 'haryana', 'uttar pradesh']```
+Add, remove or modify as you wish.
 
 <br>
 👨‍💻 Usage
